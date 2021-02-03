@@ -1,0 +1,27 @@
+def safeExtGet(prop, fallback) {
+    rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
+}
+
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 26
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation files('../libs/ayetpublisher3.5.jar')
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.facebook.react:react-native:+'
+    implementation 'com.google.code.gson:gson:2.8.6'
+}

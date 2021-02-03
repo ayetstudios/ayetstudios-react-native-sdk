@@ -1,0 +1,37 @@
+{
+  "name": "ayetsdk",
+  "title": "AyeT Studios React Native SDK",
+  "version": "0.0.1",
+  "description": "AyeT Studios React Native wrapper for Android SDK",
+  "main": "src/ayet_sdk.js",
+  "types":"src/ayet_sdk.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ayetstudios/ayetstudios-react-native-sdk.git",
+    "baseUrl": "https://github.com/ayetstudios/ayetstudios-react-native-sdk"
+  },
+  "keywords": [
+    "react-native",
+    "ayetstudios",
+    "offerwall",
+    "cpa offers"
+  ],
+  "author": {
+    "name": "Ayet Studios",
+    "email": "support@ayetstudios.com"
+  },
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "events": ">2.x"
+  },
+  "files": [
+    "src/*",
+    "libs/*",
+    "android/**/*",
+    "*.podspec"
+  ]
+}
