@@ -1,7 +1,7 @@
 {
   "name": "ayetsdk",
   "title": "AyeT Studios React Native SDK",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "AyeT Studios React Native wrapper for Android SDK",
   "main": "src/ayet_sdk.js",
   "types":"src/ayet_sdk.d.ts",

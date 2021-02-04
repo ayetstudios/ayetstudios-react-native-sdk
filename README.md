@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://www.ayetstudios.com/wp-content/uploads/2017/05/ayetstudios_logo_03-200x49-1.png" width="300" height="73"/>
+  <img src="https://d1mys92jzce605.cloudfront.net/assets/cmsfiles_a8431c4a2d4c31c484f3a9c23b32a4a46181af7a.png" width="300" height="46"/>
   <br/>
 </div>
 <br/>
