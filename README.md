@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://d1mys92jzce605.cloudfront.net/assets/cmsfiles_a8431c4a2d4c31c484f3a9c23b32a4a46181af7a.png" width="300" height="46"/>
+  <img src="https://d1mys92jzce605.cloudfront.net/assets/cmsfiles_4d7238de7f07a45bd3ddbf9cfea8ba5eb6b62bbd.png" width="300" height="50"/>
   <br/>
 </div>
 <br/>
@@ -8,7 +8,7 @@
 
 <br/>
 
-AyeT Studios react native sdk package. This package alows you to implement offerwall and native feed offers in your exsiting app in 5 minutes. For now it only works for android apps. You can check out [example app](https://github.com/ayetstudios/ayetstudios-react-native-sdk) here.
+AyeT Studios react native sdk package. This package allows you to implement offerwall and native feed offers in your exsiting app in 5 minutes. For now it only works for android apps. You can check out [example app](https://github.com/ayetstudios/ayetstudios-react-native-sdk) here.
 
 
 Functions available:
