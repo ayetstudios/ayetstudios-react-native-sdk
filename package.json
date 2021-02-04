@@ -25,13 +25,9 @@
   },
   "license": "MIT",
   "readmeFilename": "README.md",
-  "dependencies": {
-    "events": ">2.x"
-  },
   "files": [
     "src/*",
     "libs/*",
-    "android/**/*",
-    "*.podspec"
+    "android/**/*"
   ]
 }
