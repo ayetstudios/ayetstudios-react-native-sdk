@@ -4,11 +4,11 @@
 </div>
 <br/>
 
-# AyeT Studios React Native Sdk
+# AyeT Studios React Native publisher SDK
 
 <br/>
 
-AyeT Studios react native sdk package. This package allows you to implement offerwall and native feed offers in your exsiting app in 5 minutes. For now it only works for android apps. You can check out [example app](https://github.com/ayetstudios/ayetstudios-react-native-sdk) here.
+AyeT Studios React Native publisher SDK. This package allows you to implement offerwall and native feed offers in your exsiting app in 5 minutes. For now it only works with android platform. You can check out [example app](https://github.com/ayetstudios/ayetstudiosreactnativeexample) here.
 
 
 Functions available:
