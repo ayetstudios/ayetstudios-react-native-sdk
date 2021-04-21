@@ -2,25 +2,12 @@ package com.ayetstudios.reactnative;
 
 import android.content.Context;
 import android.util.Log;
-import com.ayetstudios.publishersdk.AyetSdk;
 import com.facebook.react.bridge.Callback;
 import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
-
-import com.ayetstudios.publishersdk.VideoAdInterstitial;
-import com.ayetstudios.publishersdk.interfaces.ActivateOfferCallback;
-import com.ayetstudios.publishersdk.interfaces.DeductUserBalanceCallback;
-import com.ayetstudios.publishersdk.interfaces.NativeOffersCallback;
-import com.ayetstudios.publishersdk.interfaces.RewardedVideoAsyncCallbackHandler;
-import com.ayetstudios.publishersdk.interfaces.RewardedVideoCallbackHandler;
-import com.ayetstudios.publishersdk.interfaces.UserBalanceCallback;
-import com.ayetstudios.publishersdk.interfaces.VideoAsyncCallbackHandler;
-import com.ayetstudios.publishersdk.interfaces.VideoCallbackHandler;
-import com.ayetstudios.publishersdk.messages.SdkUserBalance;
-import com.ayetstudios.publishersdk.models.NativeOfferList;
 import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.modules.core.DeviceEventManagerModule;
 import com.google.gson.Gson;
@@ -167,16 +154,16 @@ public class AyetSdkModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void getAid(final Callback getPhonesAdvertisingId){
-        if(this.advertisingId != null){
-            getPhonesAdvertisingId.invoke(this.advertisingId);
+        if(AyetSdkModule.advertisingId != null){
+            getPhonesAdvertisingId.invoke(AyetSdkModule.advertisingId);
         }else{
             try {
                 AdInfo adInfo = getAdvertisingIdInfo(reactContext);
-                this.advertisingId = adInfo.getId();
+                AyetSdkModule.advertisingId = adInfo.getId();
                 String optOutEnabled = Boolean.toString(adInfo.isLimitAdTrackingEnabled());
-                getPhonesAdvertisingId.invoke(this.advertisingId);
+                getPhonesAdvertisingId.invoke(AyetSdkModule.advertisingId);
             } catch (Exception e) {
-                    Log.d(TAG, e);
+                getPhonesAdvertisingId.invoke(null);
             }
         }
     }

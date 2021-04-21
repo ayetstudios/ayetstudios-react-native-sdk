@@ -1,4 +1,4 @@
-import { NativeModules, Platform, View, Text, Dimensions } from 'react-native';
+import { NativeModules, Platform } from 'react-native';
 import React,{useState,useEffect, Component} from 'react';
 import { WebView } from 'react-native-webview';
 const { AyetSDK } = NativeModules;
@@ -27,6 +27,7 @@ class AyetOfferwall extends Component {
 
     render() {
       let gaid = '';
+      let offerwallUrl = '';
 
       let deviceInfo ='&os_version=' + Platform.Version + '&os=' + Platform.OS + '&model=' + Platform.constants.Model + '&make=' +  Platform.constants.Manufacturer + '&type=' + ((Platform.OS == 'default') ? 'desktop' : 'phone');
 
@@ -39,17 +40,22 @@ class AyetOfferwall extends Component {
         console.log('desktop ',Platform.OS);
       }
 
+      if(this.props.adslotId){
+        offerwallUrl = 'http://ayetstudios.com/offers/web_offerwall/' + this.props.adslotId + '?external_identifier='+this.props.userId + deviceInfo + gaid;
+      }else if(this.props.adslotName && this.props.appKey){
+        offerwallUrl = 'http://ayetstudios.com/offers/web_offerwall/' + this.props.adslotName + '?external_identifier='+this.props.userId + '&app_key=' + this.props.appKey + '&adslot_name=' + this.props.adslotName + deviceInfo + gaid;
+      }
+
       return (
           <WebView
             source={{ 
-              uri: 'http://ayetstudios.com/offers/web_offerwall/' + this.props.adslotId + '?external_identifier='+this.props.userId + deviceInfo + gaid
+              uri: offerwallUrl
             }}
             style={{ 
               marginTop: 0,
               marginLeft: 0,
               marginRigh: 0,
-              marginBottom: 0,
-              minHeight: Dimensions.get('window').height
+              marginBottom: 0
             }}
             onMessage={(event) => {
               if(event.nativeEvent.data === 'goBack'){
