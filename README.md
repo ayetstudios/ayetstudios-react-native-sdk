@@ -8,7 +8,7 @@
 
 <br/>
 
-AyeT Studios React Native publisher SDK. This package allows you to implement offerwall in your exsiting react native app in 5 minutes. You can check out [example app](https://github.com/ayetstudios/ayetstudiosreactnativeexample) here.
+AyeT Studios React Native publisher SDK. This package allows you to implement offerwall in your exsiting react native app in 5 minutes. You can check out [example app](https://github.com/ayetstudios/ayetstudiosreactnativedemo) here.
 
 
 ### Setup 
@@ -18,6 +18,13 @@ In your react native project folder call instal npm package
 ```sh
 $ npm i ayetsdk
 ```
+
+```sh
+$ npm i --save react-native-webview
+$ npm react-native link react-native-webview
+```
+
+Follow directions from [react-native webview](https://github.com/react-native-webview/react-native-webview) for additional platform specific setup steps.
 
 ### How to implementation sdk
 

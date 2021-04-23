@@ -22,7 +22,9 @@ class AyetOfferwall extends Component {
     }
 
     componentDidMount(){
-      this.getAdvertisingID();
+      if(Platform.OS == 'android'){
+        this.getAdvertisingID();
+      }
     }
 
     render() {

@@ -20,7 +20,13 @@
     "react-native",
     "ayetstudios",
     "offerwall",
-    "cpa offers"
+    "cpa offers",
+    "offer wall",
+    "offer wall app",
+    "publisher offerwall",
+    "offerwall monetization",
+    "mobile offerwall",
+    "best offerwalls"
   ],
   "author": {
     "name": "Ayet Studios",
@@ -30,7 +36,6 @@
   "readmeFilename": "README.md",
   "files": [
     "src/*",
-    "libs/*",
     "android/**/*"
   ]
 }
