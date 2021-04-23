@@ -1,10 +1,13 @@
 {
   "name": "ayetsdk",
   "title": "AyeT Studios React Native publisher SDK",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "AyeT Studios React Native wrapper for publisher SDK",
   "main": "src/ayet_sdk.js",
   "types":"src/ayet_sdk.d.ts",
+  "peerDependencies": {
+    "react-native-webview": ">= 10.9.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,7 +20,13 @@
     "react-native",
     "ayetstudios",
     "offerwall",
-    "cpa offers"
+    "cpa offers",
+    "offer wall",
+    "offer wall app",
+    "publisher offerwall",
+    "offerwall monetization",
+    "mobile offerwall",
+    "best offerwalls"
   ],
   "author": {
     "name": "Ayet Studios",
@@ -27,7 +36,6 @@
   "readmeFilename": "README.md",
   "files": [
     "src/*",
-    "libs/*",
     "android/**/*"
   ]
 }

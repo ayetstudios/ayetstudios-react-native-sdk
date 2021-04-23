@@ -20,7 +20,6 @@ android {
 }
 
 dependencies {
-    implementation files('../libs/ayetpublisher3.5.jar')
     implementation 'com.android.support:multidex:1.0.3'
     implementation 'com.facebook.react:react-native:+'
     implementation 'com.google.code.gson:gson:2.8.6'
