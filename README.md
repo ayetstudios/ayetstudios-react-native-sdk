@@ -21,7 +21,6 @@ $ npm i ayetsdk
 
 ```sh
 $ npm i --save react-native-webview
-$ npm react-native link react-native-webview
 ```
 
 Follow directions from [react-native webview](https://github.com/react-native-webview/react-native-webview) for additional platform specific setup steps.
