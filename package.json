@@ -1,10 +1,10 @@
 {
   "name": "ayetsdk",
   "title": "AyeT Studios React Native publisher SDK",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "AyeT Studios React Native wrapper for publisher SDK",
   "main": "src/ayet_sdk.js",
-  "types":"src/ayet_sdk.d.ts",
+  "types": "src/ayet_sdk.d.ts",
   "peerDependencies": {
     "react-native-webview": ">= 10.9.0"
   },
