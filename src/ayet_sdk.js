@@ -1,4 +1,4 @@
-import { NativeModules, Platform } from "react-native";
+import { NativeModules, Platform, SafeAreaView } from "react-native";
 import React, { useState, useEffect, Component } from "react";
 import { WebView } from "react-native-webview";
 const { AyetSDK } = NativeModules;
@@ -72,26 +72,28 @@ class AyetOfferwall extends Component {
     }
 
     return (
-      <WebView
-        source={{
-          uri: offerwallUrl,
-        }}
-        style={{
-          marginTop: 0,
-          marginLeft: 0,
-          marginRigh: 0,
-          marginBottom: 0,
-        }}
-        onMessage={(event) => {
-          if (event.nativeEvent.data === "goBack") {
-            this.props.onClose();
-          }
-        }}
-        javaScriptEnabled={true}
-        domStorageEnabled={true}
-        startInLoadingState={false}
-        scalesPageToFit={true}
-      />
+      <SafeAreaView style={{ flex: 1 }}>
+        <WebView
+          source={{
+            uri: offerwallUrl,
+          }}
+          style={{
+            marginTop: 0,
+            marginLeft: 0,
+            marginRigh: 0,
+            marginBottom: 0,
+          }}
+          onMessage={(event) => {
+            if (event.nativeEvent.data === "goBack") {
+              this.props.onClose();
+            }
+          }}
+          javaScriptEnabled={true}
+          domStorageEnabled={true}
+          startInLoadingState={false}
+          scalesPageToFit={true}
+        />
+      </SafeAreaView>
     );
   }
 }
