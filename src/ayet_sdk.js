@@ -57,18 +57,6 @@ class AyetOfferwall extends Component {
         this.props.userId +
         deviceInfo +
         gaid;
-    } else if (this.props.adslotName && this.props.appKey) {
-      offerwallUrl =
-        "https://www.ayetstudios.com/offers/web_offerwall/" +
-        this.props.adslotName +
-        "?external_identifier=" +
-        this.props.userId +
-        "&app_key=" +
-        this.props.appKey +
-        "&adslot_name=" +
-        this.props.adslotName +
-        deviceInfo +
-        gaid;
     }
 
     return (
