@@ -30,6 +30,7 @@ class AyetOfferwall extends Component {
     let offerwallUrl = "";
 
     let deviceInfo =
+      "&sdk=react_native" +
       "&os_version=" +
       Platform.Version +
       "&os=" +
