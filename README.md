@@ -23,7 +23,7 @@ $ npm i --save react-native-webview
 
 For additional platform specific setup steps that might be required, please refer to [react-native webview](https://github.com/react-native-webview/react-native-webview).
 
-### How to integrate the offerwall in your app
+### How to integrate the ayeT-Studios Offerwall in your app
 
 ```javascript
 import { AyetOfferwall } from "ayetsdk";
