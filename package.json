@@ -1,7 +1,7 @@
 {
   "name": "ayetsdk",
   "title": "AyeT Studios React Native publisher SDK",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "AyeT Studios React Native wrapper for publisher SDK",
   "main": "src/ayet_sdk.js",
   "types": "src/ayet_sdk.d.ts",
