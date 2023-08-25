@@ -4,45 +4,45 @@
 </div>
 <br/>
 
-# AyeT Studios React Native publisher SDK
+# ayeT-Studios React Native Publisher SDK
 
 <br/>
 
-AyeT Studios React Native publisher SDK. This package allows you to implement offerwall in your exsiting react native app in 5 minutes. You can check out [example app](https://github.com/ayetstudios/ayetstudiosreactnativedemo) here.
+This package allows integration a web offerwall in a react native application effortlessly. 
+You can check out our [example app](https://github.com/ayetstudios/ayetstudiosreactnativedemo) here.
 
-### Setup
+### Preparations
+Before going forward with the implementation, you should create a *web placement* and a *web offerwall adslot* in your publisher account at [ayetstudios.com](https://www.ayetstudios.com).
 
-In your react native project folder call instal npm package
-
+### Project Setup
+First, add & install the `ayetsdk` package to your react native project:
 ```sh
 $ npm i ayetsdk
-```
-
-```sh
 $ npm i --save react-native-webview
 ```
 
-Follow directions from [react-native webview](https://github.com/react-native-webview/react-native-webview) for additional platform specific setup steps.
+For additional platform specific setup steps that might be required, please refer to [react-native webview](https://github.com/react-native-webview/react-native-webview).
 
-### How to implementation sdk
-
-Include AyetStudios sdk
+### How to integrate the offerwall in your app
 
 ```javascript
 import { AyetOfferwall } from "ayetsdk";
 ```
 
-Initialize the AyetOfferwall component requires passing userId and passing adslotId
+When rendering the `AyetOfferwall` component, a `userId` and an `adslotId` has to be passed.
+The `userId` should be a unique, persistent identifier (alphanumeric) for the user. An example might be a unique user id or the hashed email address of the user.
+`adslotId` is the id of the `web_offerwall` adslot created in your publisher dashboard at [ayetstudios.com](https://www.ayetstudios.com).
 
 ```javascript
 <AyetOfferwall
-  userId="user_id_passed_from_your_system"
-  adslotId="adslot_id_from_adslot_placement_in_publisher_dashboard"
+  userId="myuser-23374"
+  adslotId="123"
   onClose={onClose}
 />
 ```
 
-Define custom function to handle what happens on offerwall close button click
+The `onClose` callback function should be implemented according to your requirements.
+A common practice is to navigate back in your router when the `onClose` callback is triggered.
 
 ```javascript
 const onClose = () => {
