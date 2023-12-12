@@ -9,7 +9,7 @@
 <br/>
 
 This package allows integration a web offerwall in a react native application effortlessly. 
-You can check out our [example app](https://github.com/ayetstudios/ayetstudiosreactnativedemo) here.
+You can check out our [example app](https://github.com/ayetstudios/ayetstudios_react_native_sdk_demo) here.
 
 ### Preparations
 Before going forward with the implementation, you should create a *web placement* and a *web offerwall adslot* in your publisher account at [ayetstudios.com](https://www.ayetstudios.com).
