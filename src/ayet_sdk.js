@@ -1,30 +1,9 @@
-import { NativeModules, Platform, SafeAreaView } from "react-native";
+import {Platform, SafeAreaView } from "react-native";
 import React, { useState, useEffect, Component } from "react";
 import { WebView } from "react-native-webview";
-const { AyetSDK } = NativeModules;
 
 class AyetOfferwall extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      gaid: "",
-    };
-  }
-
-  getAdvertisingID() {
-    AyetSDK.getAid((advId) => {
-      this.setState({
-        gaid: advId,
-      });
-    });
-  }
-
-  componentDidMount() {
-    if (Platform.OS == "android") {
-      this.getAdvertisingID();
-    }
-  }
-
+ 
   render() {
     let gaid = "";
     let offerwallUrl = "";
@@ -42,13 +21,13 @@ class AyetOfferwall extends Component {
       "&type=" +
       (Platform.OS == "default" ? "desktop" : "phone");
 
-    if (Platform.OS == "android") {
-      gaid = "&advertising_id=" + this.state.gaid;
-    } else if (Platform.OS == "ios" && this.props.idfa) {
-      gaid = "&advertising_id=" + this.props.idfa;
-    } else {
-      console.log("desktop ", Platform.OS);
-    }
+      if (Platform.OS == "android" && this.props.gaid) {
+        gaid = "&advertising_id=" + this.props.gaid;
+      } else if (Platform.OS == "ios" && this.props.idfa) {
+        gaid = "&advertising_id=" + this.props.idfa;
+      } else {
+        console.log("desktop ", Platform.OS);
+      }
 
     if (this.props.adslotId) {
       offerwallUrl =
